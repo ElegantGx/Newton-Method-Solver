@@ -3,7 +3,7 @@ if not "%1"=="min" start /min cmd /c "%~0" min & exit
 cd  /d "%~dp0"
 
 msg * "正在检查java环境"
-java --version >nul 2>&1
+java -version >nul 2>&1
 if %errorlevel% neq 0 (
     msg * "检测到未安装Java环境"
     msg * "请根据指引安装JDK至默认目录"
